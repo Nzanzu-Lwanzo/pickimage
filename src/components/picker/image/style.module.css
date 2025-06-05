@@ -1,0 +1,57 @@
+.image__container {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--bg);
+  min-height: 300px;
+  color: var(--text-color);
+  position: relative;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+}
+
+.alt {
+  font-weight: bold;
+  text-align: end;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.action__button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.delete {
+    background-color: lightcoral;
+  }
+}
