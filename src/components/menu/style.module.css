@@ -1,0 +1,55 @@
+.studio__main__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-block: 2rem;
+}
+
+.metas,
+.navigation__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.navigation__buttons {
+  height: 100%;
+}
+
+.extra__button,
+.navigation__button {
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation__button {
+  background-color: var(--disabled);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.extra__button {
+  background-color: transparent;
+  color: var(--text-color);
+  background-color: #000;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.metas {
+  gap: 0.5rem;
+}

@@ -1,4 +1,3 @@
-
 .epilogue,
 * {
     font-family: "Epilogue", sans-serif !important;
@@ -12,6 +11,7 @@
     outline: none;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -28,7 +28,6 @@ html {
 
 body {
     min-height: 100dvh;
-    background-color: var(--background);
 }
 
 .center {
