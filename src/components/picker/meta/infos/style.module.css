@@ -1,0 +1,28 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.75rem;
+  color: var(--bg);
+}
+
+.row {
+  border-bottom: 1px solid var(--bg);
+}
+
+.label,
+.value {
+  padding: 1rem;
+  vertical-align: top;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.label {
+  width: 30%;
+  font-weight: bold;
+}
+
+.value {
+  width: 70%;
+}

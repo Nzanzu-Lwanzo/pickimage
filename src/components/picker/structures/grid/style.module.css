@@ -1,8 +1,10 @@
 .images__grid {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  padding: 1rem;
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-content: flex-start;
+  padding: 16px;
 }
 
 .card {

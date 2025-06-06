@@ -2,9 +2,15 @@
   border-radius: 4px;
   overflow: hidden;
   background-color: var(--bg);
-  min-height: 300px;
+  height: 300px;
   color: var(--text-color);
   position: relative;
+
+  flex: 1 1 calc(33.333% - 32px); /* 3 cards per row with gap consideration */
+  max-width: calc(33.333% - 32px);
+  box-sizing: border-box;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
 }
 
 .layer {
@@ -53,5 +59,20 @@
 
   &.delete {
     background-color: lightcoral;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .image__container {
+    flex: 1 1 calc(50% - 32px); /* 2 cards per row */
+    max-width: calc(50% - 32px);
+  }
+}
+
+@media (max-width: 600px) {
+  .image__container {
+    flex: 1 1 100%; /* 1 card per row */
+    max-width: 100%;
   }
 }
