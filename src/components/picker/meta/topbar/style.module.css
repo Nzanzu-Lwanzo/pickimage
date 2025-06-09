@@ -1,0 +1,29 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-smooth);
+}
+
+.menu__button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.75rem;
+
+  &:hover {
+    background-color: var(--bg);
+  }
+
+  &.active {
+    background-color: var(--text-color);
+    color: var(--bg);
+  }
+}
