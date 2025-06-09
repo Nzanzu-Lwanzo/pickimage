@@ -1,38 +1,19 @@
-import {
-  createContext,
-  useContext,
-  useState,
-  type PropsWithChildren,
-} from "react";
-import type { PickerMetaTabType } from "../@types";
+import { createContext, useContext, type PropsWithChildren } from "react";
 
-interface PickerMetaContextType {
-  pickerMetaTab: PickerMetaTabType;
-  setPickerMetaTab: React.Dispatch<React.SetStateAction<PickerMetaTabType>>;
+interface PickerContext {}
+
+export const PickerContext = createContext<PickerContext | null>(null);
+
+export function usePickerContext() {
+  return useContext(PickerContext);
 }
 
-export const PickerMetaContext = createContext<PickerMetaContextType | null>(
-  null
-);
-
-export function usePickerMetaContext() {
-  return useContext(PickerMetaContext);
-}
-
-export default function PickerMetaContextProvider({
+export default function PickerContextProvider({
   children,
 }: PropsWithChildren<{}>) {
-  const [pickerMetaTab, setPickerMetaTab] =
-    useState<PickerMetaTabType>("metadata");
-
-  const value = {
-    pickerMetaTab,
-    setPickerMetaTab,
-  };
+  const value = {};
 
   return (
-    <PickerMetaContext.Provider value={value}>
-      {children}
-    </PickerMetaContext.Provider>
+    <PickerContext.Provider value={value}>{children}</PickerContext.Provider>
   );
 }

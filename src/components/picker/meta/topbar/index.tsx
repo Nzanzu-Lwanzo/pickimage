@@ -2,7 +2,7 @@ import InfoIcon from "../../../../assets/icons/info";
 import TagIcon from "../../../../assets/icons/tag";
 import PencilSimpleLine from "../../../../assets/icons/pencilSimpleLine";
 import style from "./style.module.css";
-import { usePickerMetaContext } from "../../../../lib/contexts/picker";
+import { usePickerMetaContext } from "../../../../lib/contexts/pickerMeta";
 import type { PickerMetaTabType } from "../../../../lib/@types";
 
 const MetaTabsTopbar = () => {

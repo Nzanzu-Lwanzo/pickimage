@@ -1,31 +1,40 @@
 import type { ImageType } from "../../../lib/@types";
-import style from "./style.module.css";
+import _style from "./style.module.css";
 import TrashIcon from "../../../assets/icons/trash";
 import CloudArrowDown from "../../../assets/icons/cloudArrowDown";
 import Checkbox from "../../__global__/checkbox";
 import ArrowsOut from "../../../assets/icons/arrowsOut";
 import Tag from "../../__global__/tag";
+import type { CSSProperties } from "react";
 
-const ImageCard = ({ image }: { image: ImageType }) => {
+const ImageCard = ({
+  image,
+  style,
+}: {
+  image: ImageType;
+  style?: CSSProperties;
+}) => {
   return (
-    <div className={style.image__container}>
-      <img key={image.id} src={image.url} />
-      <div className={style.layer}>
+    // <div className={_style.image__container}>
+    <>
+      <img key={image.id} src={image.url} style={style} />
+      <div className={_style.image__legend}>
         <Tag text="Public" />
-        <div className={style.actions}>
-          <button className={`${style.delete} ${style.action__button}`}>
-            <TrashIcon />
+        <div className={_style.actions}>
+          <button className={`${_style.delete} ${_style.action__button}`}>
+            <TrashIcon dimension={15} />
           </button>
-          <button className={style.action__button}>
-            <CloudArrowDown />
+          <button className={_style.action__button}>
+            <CloudArrowDown dimension={15} />
           </button>
-          <button className={style.action__button}>
-            <ArrowsOut />
+          <button className={_style.action__button}>
+            <ArrowsOut dimension={15} />
           </button>
           <Checkbox />
         </div>
       </div>
-    </div>
+    </>
+    // </div>
   );
 };
 
