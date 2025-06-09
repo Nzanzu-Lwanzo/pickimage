@@ -7,6 +7,7 @@ import UpdateImageMetadataForm from "../../__global__/update";
 import MetaTabsTopbar from "./topbar";
 import ImageRefs from "./references";
 import ImageInfos from "./infos";
+import { usePickerContext } from "../../../lib/contexts/picker";
 
 const Tabs: Record<PickerMetaTabType, React.ReactElement> = {
   metadata: <ImageInfos />,
@@ -15,21 +16,29 @@ const Tabs: Record<PickerMetaTabType, React.ReactElement> = {
 };
 
 const MetaOnImage = () => {
-  const ctx = usePickerMetaContext();
+  const pickerMetaCtx = usePickerMetaContext();
   const getTab = useCallback(
     (tab: PickerMetaTabType) => Tabs[tab],
-    [ctx?.pickerMetaTab]
+    [pickerMetaCtx?.pickerMetaTab]
   );
+
+  const pickerCtx = usePickerContext();
 
   return (
     <div className={style.meta__on__image}>
       <div className={style.preview__image}>
-        Select an image to preview and update
+        {pickerCtx?.currentImage ? (
+          <>
+            <img src={pickerCtx.currentImage.url} alt="" />
+          </>
+        ) : (
+          "Select an image to preview and update"
+        )}
       </div>
       <div className={style.distributive__menu}>
         <MetaTabsTopbar />
         <div className={style.section__wrapper}>
-          {getTab(ctx?.pickerMetaTab!)}
+          {getTab(pickerMetaCtx?.pickerMetaTab!)}
         </div>
       </div>
     </div>

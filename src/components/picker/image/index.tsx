@@ -6,6 +6,7 @@ import Checkbox from "../../__global__/checkbox";
 import ArrowsOut from "../../../assets/icons/arrowsOut";
 import Tag from "../../__global__/tag";
 import type { CSSProperties } from "react";
+import { usePickerContext } from "../../../lib/contexts/picker";
 
 const ImageCard = ({
   image,
@@ -14,8 +15,9 @@ const ImageCard = ({
   image: ImageType;
   style?: CSSProperties;
 }) => {
+  const ctx = usePickerContext();
+
   return (
-    // <div className={_style.image__container}>
     <>
       <img key={image.id} src={image.url} style={style} />
       <div className={_style.image__legend}>
@@ -27,14 +29,16 @@ const ImageCard = ({
           <button className={_style.action__button}>
             <CloudArrowDown dimension={15} />
           </button>
-          <button className={_style.action__button}>
+          <button
+            className={_style.action__button}
+            onClick={() => ctx?.setCurrentImage(image)}
+          >
             <ArrowsOut dimension={15} />
           </button>
           <Checkbox />
         </div>
       </div>
     </>
-    // </div>
   );
 };
 
