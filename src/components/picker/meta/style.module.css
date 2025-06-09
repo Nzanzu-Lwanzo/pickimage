@@ -23,5 +23,9 @@
   border-radius: 4px;
   overflow: hidden;
   overflow: auto;
-  background-color: var(--text-color);
+  color: var(--text-color);
+}
+
+.section__wrapper {
+  min-height: 300px;
 }

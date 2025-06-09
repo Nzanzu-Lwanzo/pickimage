@@ -1,0 +1,39 @@
+.update__form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.input__field {
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding:.5rem 1rem;
+  border-radius: 25px;
+  background-color: var(--disabled);
+  width: fit-content;
+  color: #FFF;
+  cursor: pointer;
+  transition: .2s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

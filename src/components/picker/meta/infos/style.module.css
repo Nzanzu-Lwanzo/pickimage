@@ -3,7 +3,6 @@
   border-collapse: collapse;
   table-layout: fixed;
   font-size: 0.75rem;
-  color: var(--bg);
 }
 
 .row {

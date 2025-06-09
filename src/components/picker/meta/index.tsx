@@ -1,16 +1,17 @@
 import style from "./style.module.css";
 import type React from "react";
 import type { PickerMetaTabType } from "../../../lib/@types";
+import { useCallback } from "react";
+import { usePickerMetaContext } from "../../../lib/contexts/picker";
+import UpdateImageMetadataForm from "../../__global__/update";
 import MetaTabsTopbar from "./topbar";
 import ImageRefs from "./references";
 import ImageInfos from "./infos";
-import { useCallback } from "react";
-import { usePickerMetaContext } from "../../../lib/contexts/picker";
 
 const Tabs: Record<PickerMetaTabType, React.ReactElement> = {
   metadata: <ImageInfos />,
   references: <ImageRefs />,
-  update: <></>,
+  update: <UpdateImageMetadataForm />,
 };
 
 const MetaOnImage = () => {
