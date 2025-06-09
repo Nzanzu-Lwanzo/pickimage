@@ -1,6 +1,9 @@
 .meta__on__image {
   border-right: 1px solid var(--smooth-bg);
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100dvh;
 }
 .preview__image {
   height: 400px;

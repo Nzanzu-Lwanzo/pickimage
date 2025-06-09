@@ -7,9 +7,11 @@ const PickerSection = () => {
   return (
     <div className={style.picker__section}>
       <div className={style.data__space}>
-        <PickerMetaContextProvider>
-          <MetaOnImage />
-        </PickerMetaContextProvider>
+        <div>
+          <PickerMetaContextProvider>
+            <MetaOnImage />
+          </PickerMetaContextProvider>
+        </div>
         <ImagesGrid />
       </div>
     </div>

@@ -8,7 +8,13 @@ const ImagesGrid = () => {
   return (
     <div className={style.images__grid}>
       {images.map((image) => {
-        return <ImageCard key={image.id} image={image} />;
+        return <>
+          <ImageCard key={image.id} image={image} />
+          <ImageCard key={image.id} image={image} />
+          <ImageCard key={image.id} image={image} />
+          <ImageCard key={image.id} image={image} />
+          <ImageCard key={image.id} image={image} />
+        </>;
       })}
     </div>
   );
