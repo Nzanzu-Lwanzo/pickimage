@@ -4,7 +4,32 @@
   position: sticky;
   top: 0;
   height: 100dvh;
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    display: none;
+  }
+
+  .topbar__button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
+
 .preview__image {
   height: 400px;
   width: 100%;
@@ -30,4 +55,22 @@
 
 .section__wrapper {
   min-height: 300px;
+}
+
+/* MEDIA QUERIES */
+@media only all and (max-width: 1024px) {
+  .meta__on__image__container {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-smooth);
+    z-index: 2;
+
+    .topbar {
+      display: flex;
+    }
+  }
+
+  .active {
+    display: block;
+  }
 }

@@ -15,10 +15,6 @@
 
 /* MEDIA QUERIES */
 @media only all and (max-width: 1024px) {
-  .meta__on__image__container {
-    display: none;
-  }
-
   .data__space {
     grid-template-columns: auto;
   }
