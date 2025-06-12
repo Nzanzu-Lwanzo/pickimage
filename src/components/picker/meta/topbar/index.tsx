@@ -1,5 +1,4 @@
 import InfoIcon from "../../../../assets/icons/info";
-import TagIcon from "../../../../assets/icons/tag";
 import PencilSimpleLine from "../../../../assets/icons/pencilSimpleLine";
 import style from "./style.module.css";
 import { usePickerMetaContext } from "../../../../lib/contexts/pickerMeta";
@@ -22,15 +21,6 @@ const MetaTabsTopbar = () => {
         <span>Update</span>
         <span className="center">
           <PencilSimpleLine />
-        </span>
-      </button>
-      <button
-        className={`${getActive("references")} ${style.menu__button}`}
-        onClick={() => handleSwitchTab("references")}
-      >
-        <span>References</span>
-        <span className="center">
-          <TagIcon />
         </span>
       </button>
       <button

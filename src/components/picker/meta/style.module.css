@@ -45,11 +45,8 @@
 
 .distributive__menu {
   height: fit-content;
-  max-height: 560px;
   width: 100%;
   margin-block: 1rem;
-  overflow: hidden;
-  overflow: auto;
   color: var(--text-color);
 }
 
@@ -61,7 +58,10 @@
 @media only all and (max-width: 1024px) {
   .meta__on__image__container {
     display: none;
-    position: absolute;
+    position: fixed;
+    inset: 0;
+    height: 100dvh;
+    width: 100%;
     background-color: var(--bg-smooth);
     z-index: 2;
 
@@ -72,5 +72,19 @@
 
   .active {
     display: block;
+  }
+
+  .meta__on__image {
+    overflow: auto;
+  }
+
+  .preview__image {
+    height: auto;
+  }
+
+  .section__wrapper {
+    background-color: var(--smooth-bg);
+    margin-top: 1rem;
+    border-radius: 4px;
   }
 }

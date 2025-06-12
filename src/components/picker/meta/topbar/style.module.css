@@ -17,6 +17,7 @@
   color: var(--text-color);
   cursor: pointer;
   font-size: 0.75rem;
+  border-radius: 3px;
 
   &:hover {
     background-color: var(--bg);
