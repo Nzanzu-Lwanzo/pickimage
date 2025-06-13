@@ -57,13 +57,16 @@
 /* MEDIA QUERIES */
 @media only all and (max-width: 1024px) {
   .meta__on__image__container {
-    display: none;
     position: fixed;
     inset: 0;
     height: 100dvh;
     width: 100%;
     background-color: var(--bg-smooth);
     z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    transform: scale(0);
 
     .topbar {
       display: flex;
@@ -71,7 +74,9 @@
   }
 
   .active {
-    display: block;
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
   }
 
   .meta__on__image {
