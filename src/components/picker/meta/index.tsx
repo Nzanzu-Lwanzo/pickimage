@@ -3,7 +3,7 @@ import type React from "react";
 import type { PickerMetaTabType } from "../../../lib/@types";
 import { useCallback } from "react";
 import { usePickerMetaContext } from "../../../lib/contexts/pickerMeta";
-import UpdateImageMetadataForm from "../../__global__/update";
+import UpdateImageMetadataForm from "../../__global__/imageForm";
 import MetaTabsTopbar from "./topbar";
 import ImageRefs from "./references";
 import ImageInfos from "./infos";
