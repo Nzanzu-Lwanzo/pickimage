@@ -3,16 +3,27 @@ import ImagesIcon from "../../assets/icons/images";
 import CloudArrowUp from "../../assets/icons/cloudArrowUp";
 import HouseLineIcon from "../../assets/icons/houseLine";
 import Gear from "../../assets/icons/gear";
+import { useStudioContext } from "../../lib/contexts/studio";
 
 const StudioMainMenu = () => {
+  const ctx = useStudioContext();
+
   return (
     <div className={style.studio__main__menu}>
       <div className={style.navigation__buttons}>
-        <button type="button" className={style.navigation__button}>
+        <button
+          type="button"
+          className={style.navigation__button}
+          onClick={() => ctx?.setSection("picker")}
+        >
           <ImagesIcon dimension={25} />
         </button>
 
-        <button type="button" className={style.navigation__button}>
+        <button
+          type="button"
+          className={style.navigation__button}
+          onClick={() => ctx?.setSection("uploader")}
+        >
           <CloudArrowUp dimension={25} />
         </button>
       </div>

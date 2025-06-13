@@ -4,3 +4,5 @@ export interface ImageType {
 }
 
 export type PickerMetaTabType = "update" | "references" | "metadata";
+
+export type StudioSectionType = "picker" | "uploader";
