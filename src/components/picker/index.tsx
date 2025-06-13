@@ -1,5 +1,5 @@
 import style from "./style.module.css";
-import ImagesGrid from "./structures/grid";
+import ImagesGrid from "./listers/grid";
 import MetaOnImage from "./meta";
 import PickerMetaContextProvider from "../../lib/contexts/pickerMeta";
 import PickerContextProvider from "../../lib/contexts/picker";

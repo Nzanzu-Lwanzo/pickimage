@@ -1,12 +1,12 @@
-import type { ImageType } from "../../../lib/@types";
+import type { ImageType } from "../../../../../lib/@types";
 import _style from "./style.module.css";
-import TrashIcon from "../../../assets/icons/trash";
-import CloudArrowDown from "../../../assets/icons/cloudArrowDown";
-import Checkbox from "../../__global__/checkbox";
-import ArrowsOut from "../../../assets/icons/arrowsOut";
-import Tag from "../../__global__/tag";
+import TrashIcon from "../../../../../assets/icons/trash";
+import CloudArrowDown from "../../../../../assets/icons/cloudArrowDown";
+import Checkbox from "../../../../__global__/checkbox";
+import ArrowsOut from "../../../../../assets/icons/arrowsOut";
+import Tag from "../../../../__global__/tag";
 import type { CSSProperties } from "react";
-import { usePickerContext } from "../../../lib/contexts/picker";
+import { usePickerContext } from "../../../../../lib/contexts/picker";
 
 const ImageCard = ({
   image,

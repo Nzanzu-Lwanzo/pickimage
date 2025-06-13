@@ -1,5 +1,5 @@
 import { useGetImages } from "../../../../lib/hooks/images";
-import ImageCard from "../../image";
+import ImageCard from "./image";
 import { Masonry } from "react-plock";
 import style from "./style.module.css";
 import SpinLoader from "../../../__global__/loader";
